@@ -1,0 +1,54 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789321956.081468     348 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1789321956.123505     348 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX512_FP16 AVX_VNNI AMX_TILE AMX_INT8 AMX_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1789321957.491130     348 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[1/5] Loading & preprocessing '../data/shakespeare.txt' ...
+      Total tokens: 202,646 | Vocabulary size: 6,755
+      Total sequences: 202,631
+[2/5] Splitting into train/validation sets ...
+      Train: 182,367 | Validation: 20,264
+[3/5] Building model ...
+Model: "lstm_text_generator"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━┓
+┃ Layer (type)                    ┃ Output Shape           ┃       Param # ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━┩
+│ embedding (Embedding)           │ (None, 15, 100)        │       675,500 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ lstm_1 (LSTM)                   │ (None, 150)            │       150,600 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ dropout_1 (Dropout)             │ (None, 150)            │             0 │
+├─────────────────────────────────┼────────────────────────┼───────────────┤
+│ output (Dense)                  │ (None, 6755)           │     1,020,005 │
+└─────────────────────────────────┴────────────────────────┴───────────────┘
+ Total params: 1,846,105 (7.04 MB)
+ Trainable params: 1,846,105 (7.04 MB)
+ Non-trainable params: 0 (0.00 B)
+[4/5] Training ...
+Epoch 1/15
+713/713 - 66s - 92ms/step - accuracy: 0.0406 - loss: 6.5607 - val_accuracy: 0.0542 - val_loss: 6.3129
+Epoch 2/15
+713/713 - 81s - 113ms/step - accuracy: 0.0593 - loss: 6.2138 - val_accuracy: 0.0690 - val_loss: 6.1236
+Epoch 3/15
+713/713 - 63s - 88ms/step - accuracy: 0.0778 - loss: 6.0040 - val_accuracy: 0.0848 - val_loss: 5.9969
+Epoch 4/15
+713/713 - 83s - 116ms/step - accuracy: 0.0885 - loss: 5.8588 - val_accuracy: 0.0924 - val_loss: 5.9183
+Epoch 5/15
+713/713 - 81s - 114ms/step - accuracy: 0.0955 - loss: 5.7411 - val_accuracy: 0.0953 - val_loss: 5.8639
+Epoch 6/15
+713/713 - 83s - 117ms/step - accuracy: 0.1003 - loss: 5.6338 - val_accuracy: 0.0974 - val_loss: 5.8216
+Epoch 7/15
+713/713 - 81s - 113ms/step - accuracy: 0.1051 - loss: 5.5343 - val_accuracy: 0.0987 - val_loss: 5.7967
+Epoch 8/15
+713/713 - 82s - 115ms/step - accuracy: 0.1084 - loss: 5.4414 - val_accuracy: 0.1012 - val_loss: 5.7842
+Epoch 9/15
+713/713 - 82s - 115ms/step - accuracy: 0.1127 - loss: 5.3573 - val_accuracy: 0.1025 - val_loss: 5.7831
+Epoch 10/15
+713/713 - 63s - 88ms/step - accuracy: 0.1154 - loss: 5.2765 - val_accuracy: 0.1043 - val_loss: 5.7901
+Epoch 11/15
+713/713 - 83s - 116ms/step - accuracy: 0.1180 - loss: 5.2019 - val_accuracy: 0.1058 - val_loss: 5.8036
+Epoch 12/15
+713/713 - 81s - 114ms/step - accuracy: 0.1210 - loss: 5.1298 - val_accuracy: 0.1065 - val_loss: 5.8302
+[5/5] Saving model, vocabulary, and history ...
+Done. Model saved to '../models/lstm_text_model.keras', vocabulary saved to '../models/vocab.pkl'.

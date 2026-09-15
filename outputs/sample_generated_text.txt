@@ -1,0 +1,65 @@
+LSTM Text Generation - Sample Outputs
+Model: 1-layer LSTM (150 units), seq_length=15, embedding_dim=100, vocab_size=6755
+Trained on: Shakespeare complete works (~202K words), 12 epochs (early stopped)
+======================================================================
+
+SEED: "to be or not to be"
+----------------------------------------------------------------------
+  [temperature=0.5]
+  to be or not to be a officer in the world that thou hast not that a man shall be so much to be gone i am a man that hath that if the other will
+
+  [temperature=0.8]
+  to be or not to be thy country and be a and you were made at some own bed fear my lord why buckingham what i cannot tear the place and settled their course disdains and
+
+  [temperature=1.0]
+  to be or not to be but so thought therefore have return on it mark you for the shadow of this will be no king richard clarence and the king edwards exeter edward art thou haste
+
+
+SEED: "romeo where art thou"
+----------------------------------------------------------------------
+  [temperature=0.5]
+  romeo where art thou not mine own and to thy blood to the king and let us be a man of the king and the sun were in the field and let me be
+
+  [temperature=0.8]
+  romeo where art thou my head and thy lowly windows which done is the earth of answer for you point his opposers subject when she is possessd into my care to do it die
+
+  [temperature=1.0]
+  romeo where art thou hortensio abroad where of a woful ages aunt we hope will speak upon me and think you the deed there will yield beasts of summers most innocence katharina now but
+
+
+SEED: "the king said unto"
+----------------------------------------------------------------------
+  [temperature=0.5]
+  the king said unto the regal day as i will not in thee and the nobles of thy name i fear the king and the king and that are true as thou art romeo
+
+  [temperature=0.8]
+  the king said unto the time and all a leg and strength and in your presence would be married with a dream and bear the grave that have been seen were a man to
+
+  [temperature=1.0]
+  the king said unto him appear king richard iii away our misery have not no two one say sicinius how it beggd the great bell but was much menenius then dispatch thus rather be
+
+
+SEED: "shall i compare thee to"
+----------------------------------------------------------------------
+  [temperature=0.5]
+  shall i compare thee to the king and thy death and for the world and out of all the duke of york was a man but that as i will again to make it but
+
+  [temperature=0.8]
+  shall i compare thee to the meeting of the world with the crack to the law where is my own power will not you hear by both the city makes the codpiece of such your
+
+  [temperature=1.0]
+  shall i compare thee to france i find one and the sullen privilege this is in mine own loyalty god is salt prophets quit ope that bark like breath my husband to be one gyves
+
+
+SEED: "love is a"
+----------------------------------------------------------------------
+  [temperature=0.5]
+  love is a man that ever set into the sprites to the time of the house of the tower and let him be a time for such a time of vienna that he
+
+  [temperature=0.8]
+  love is a black like come and will you have put one all his blood to be brief and me too good resolved duke vincentio angelo you are your grace will be satisfied
+
+  [temperature=1.0]
+  love is a manner capulet brought up with things and susan his woes will forget to me baptista nay grandam your honour how i pray thee scarce and all him my head in
+
+
